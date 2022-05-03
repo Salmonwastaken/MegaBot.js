@@ -23,7 +23,7 @@ const client = new Client({intents: [Intents.FLAGS.GUILDS,
 /**
  * Takes care of Spotify authorization.
  */
-function spotifyToken() {
+async function spotifyToken() {
   spotifyApi.refreshAccessToken().then(
       function(data) {
         console.log('Initial access token has been set');
@@ -46,7 +46,10 @@ function spotifyToken() {
   }, 3500000);
 }
 
-function spotifyBot() {
+/**
+ * Spotbot functionality
+ */
+async function spotifyBot() {
   // Check if message was sent in specific channel
   if (msg.channelId == spotchannel ) {
     // Check if the message was sent by a Bot
@@ -88,7 +91,7 @@ client.once(`ready`, (async ()=>{
 
 // Fires on every message
 client.on(`messageCreate`, async (msg) => {
-  spotifyBot()
+  spotifyBot();
 });
 
 
