@@ -112,3 +112,4 @@ config.json
 
 #Others
 .eslinrc.json
+package-lock.json
