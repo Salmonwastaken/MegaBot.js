@@ -48,8 +48,9 @@ async function spotifyToken() {
 
 /**
  * Spotbot functionality
+ * @param {Object} msg The message that triggered the function.
  */
-async function spotifyBot() {
+async function spotifyBot(msg) {
   // Check if message was sent in specific channel
   if (msg.channelId == spotchannel ) {
     // Check if the message was sent by a Bot
@@ -91,7 +92,7 @@ client.once(`ready`, (async ()=>{
 
 // Fires on every message
 client.on(`messageCreate`, async (msg) => {
-  spotifyBot();
+  spotifyBot(msg);
 });
 
 
