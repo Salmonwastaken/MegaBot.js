@@ -16,7 +16,7 @@ const spoofy = require('./functions/spotify/spotify');
 client.once(`ready`, (async () => {
   console.log(`Ready`);
   spoofy.spotifyToken();
-  mascot.masBot();
+  mascot.masBot(client);
 }));
 
 // Fires on every message

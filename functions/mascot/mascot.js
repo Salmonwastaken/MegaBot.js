@@ -21,7 +21,7 @@ const dropboxConfig = {
 const dbx = new Dropbox(dropboxConfig);
 
 module.exports = {
-  masBot: async function() {
+  masBot: async function(client) {
     setInterval(async () => {
       // Fetch channels and save them in a const
       const Mascot = await client.channels.fetch(mascotchannelId).catch();
