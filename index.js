@@ -13,7 +13,7 @@ const client = new Client({
 const mascot = require('./functions/mascot/mascot');
 const spoofy = require('./functions/spotify/spotify');
 
-client.once(`ready`, (async () => {
+client.on(`ready`, (async () => {
   console.log(`Ready`);
   spoofy.spotifyToken();
   mascot.masBot(client);
