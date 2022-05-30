@@ -21,8 +21,8 @@
     "eslint-config-google": "^0.14.0"
   },
   "dependencies": {
-    "discord.js": "^13.6.0",
-    "dropbox": "^10.28.0",
-    "spotify-web-api-node": "^5.0.2"
+    "discord.js": "13.5.0",
+    "dropbox": "10.28.0",
+    "spotify-web-api-node": "5.0.2"
   }
 }
