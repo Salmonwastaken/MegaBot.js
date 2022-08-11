@@ -33,11 +33,11 @@ async function fetchDiscordObjects(client) {
 
 /**
 * Queries Dropbox API for currently available files
-* @param {Object} User A variable that holds the Discord object
+* @param {Object} user A variable that holds the Discord object
 * @param {String} mascotChannel The channel to send the mascot to
 * @return {Object} fileName and filePath from first of available files.
 */
-async function getFile(User, mascotChannel) {
+async function getFile(user, mascotChannel) {
   dbx.filesListFolder({path: dropboxFolder}).then((fileList) => {
     const fileName = fileList.result.entries[0].name;
     const filePath = fileList.result.entries[0].path_lower;
@@ -46,7 +46,7 @@ async function getFile(User, mascotChannel) {
     console.error(err);
     // Just a bit of fun if Dropbox doesn't return anything.
     mascotChannel.send({
-      content: `${User} Man what the fuck there are no images left.`,
+      content: `${user} Man what the fuck there are no images left.`,
     });
   });
 }
