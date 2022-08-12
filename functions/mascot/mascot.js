@@ -10,7 +10,7 @@ const {globalInterval,
   dropboxFolder,
   danId} = require(`/etc/Projects/MegaBot/vars.json`);
 
-const Dropbox = require(`dropbox`); // eslint-disable-line no-unused-vars
+const { Dropbox } = require(`dropbox`); // eslint-disable-line no-unused-vars
 
 const dropboxConfig = {
   refreshToken: dropboxRefresh,
