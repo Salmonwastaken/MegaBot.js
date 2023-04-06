@@ -8,7 +8,7 @@ const {globalInterval,
   dropboxClientSecret,
   mascotchannelId,
   dropboxFolder,
-  danId} = require(`/etc/Projects/MegaBot/vars.json`);
+  danId} = process.env;
 
 const {Dropbox} = require(`dropbox`); // eslint-disable-line no-unused-vars
 

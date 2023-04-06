@@ -2,7 +2,7 @@ const {spotchannel,
   spotifyID,
   spotifySecret,
   spotifyRefresh,
-  steamedcatsID} = require( `/etc/Projects/MegaBot/vars.json` );
+  steamedcatsID} = process.env;
 const SpotifyWebApi = require('spotify-web-api-node');
 
 

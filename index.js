@@ -2,7 +2,7 @@
 
 // Require the necessary discord.js classes
 const {Client, Intents} = require(`discord.js`);
-const {token} = require(`/etc/Projects/MegaBot/vars.json`);
+const {token} = process.env;
 
 // Create a new Discord client instance
 const client = new Client({
